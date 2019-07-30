@@ -1,0 +1,433 @@
+{
+	"faction": "Space Marines",
+	"id": "Codex Astartes",
+	"version": "0.01",
+	"by": "chris262",
+
+	"includeFiles": {
+		"primary": "./statList/SM.json",
+		"allies": [
+					"./statList/ImperialAllies.json",
+					"./statList/ImperialNavy.json"
+					],
+		"common": [
+					"./statList/Reference.json"
+					]
+	},
+    "specialRules": [
+		{ "title": "They Shall Know No Fear" },
+		{ "title": "Space Marine Transports" }
+	],
+	"sections":	[
+		{ 
+			"name": "Detachments",	
+			"formations": [
+
+				{
+					"name": "Assaults",
+					"composition": [
+						{ "id": "Assaults",		"type": "core",		"units": 	[{"id": "assaults1", "type": "Assaults",	"quantity": 4}],
+																		"min": 1, "max": 1 },
+
+						{ "id": "Commander",		"type": "optional",	"units":	[{"id": "commander1", "type": "Supreme Commander",	"quantity": 1, "addPoints":[{"each":1, "points":100}]},
+																					 {"id": "commander2", "type": "Captain", 	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander3", "type": "Chaplain",	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander4", "type": "Librarian",	"quantity": 1, "addPoints":[{"each":1, "points":50}]}],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Vindicators",		"type": "optional",	"units":	[{"id": "vindicator1", "type": "Vindicator",	"quantity": 1, "addPoints":[{"min":1, "max":1, "points":50}]},
+																					 {"id": "vindicator2", "type": "Vindicator",	"quantity": 2, "addPoints":[{"min":2, "max":2, "points":75}]}],
+																		"min": 0, "max": 1 }
+					],
+					"conditions": [
+						{
+							"what": ["Drop Pod", "Vindicator"]
+						}
+					],
+					"points": 175
+				},
+				{
+					"name": "Bikes",
+					"composition": [
+						{ "id": "Bikes",	"type": "core",		"units": 	[{"id": "bikes1", "type": "Bike",			"quantity": 1},
+																			 {"id": "bikes2", "type": "Attack Bike",	"quantity": 1}],
+																		"min": 5, "max": 5 },
+
+						{ "id": "Commander",		"type": "optional",	"units":	[{"id": "commander1", "type": "Supreme Commander",	"quantity": 1, "addPoints":[{"each":1, "points":100}]},
+																					 {"id": "commander2", "type": "Captain",	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander3", "type": "Chaplain",	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander4", "type": "Librarian",	"quantity": 1, "addPoints":[{"each":1, "points":50}]}],
+																		"min": 0, "max": 1 }
+																		
+					],
+					"conditions": [
+					],
+					"points": 200
+				},
+				{
+					"name": "Devastators",
+					"composition": [
+						{ "id": "Devastators",		"type": "core",		"units":	[{"id": "devastators1", "type": "Devastators",	"quantity": 4}],
+																		"min": 1, "max": 1,
+																		"consume": 1,
+																		"transports": [ {"type":"Rhino", "capacity":2, "default": true},
+																						{"type":"Razorback (THB)", "capacity":1, "addPoints":25},
+																						{"type":"Razorback (TL)", "capacity":1, "addPoints":25},
+																						{"type":"Land Raider", "capacity":2, "addPoints":50},
+																						{"type":"Drop Pod", "capacity":1}
+																						]},
+
+						{ "id": "Dreadnoughts",		"type": "optional",	"units":	[{"id": "dreadnoughts1", "type": "Dreadnought Tactical", "quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "dreadnoughts2", "type": "Dreadnought Hellfire", "quantity": 1, "addPoints":[{"each":1, "points":50}]}],
+																		"min": 0, "max": 2,
+																		"consume": 2,
+																		"transports": [{"type":"Dreadnought Drop Pod", "capacity":2}]},
+
+						{ "id": "Commander",		"type": "optional",	"units":	[{"id": "commander1", "type": "Supreme Commander",	"quantity": 1, "addPoints":[{"each":1, "points":100}]},
+																					 {"id": "commander2", "type": "Captain", 	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander3", "type": "Chaplain",	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander4", "type": "Librarian",	"quantity": 1, "addPoints":[{"each":1, "points":50}]}],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Hunter",			"type": "optional",	"units":	[{"id": "hunter1", "type": "Hunter", 	"quantity": 1,  "addPoints":[{"each":1, "points":75}]}],
+																		"min": 0, "max": 1 }
+					],
+					"conditions": [
+						{
+							"what": ["Drop Pod", "Rhino"]
+						},
+						{
+							"what": ["Drop Pod", "Razorback (THB)"]
+						},
+						{
+							"what": ["Drop Pod", "Razorback (TL)"]
+						},
+						{
+							"what": ["Drop Pod", "Land Raider"]
+						},
+						{
+							"what": ["Drop Pod", "Hunter"]
+						}
+					],
+					"points": 250
+				},
+				{
+					"name": "Land Raiders",
+					"composition": [
+						{ "id": "Land Raiders",		"type": "core",		"units": 	[{"id": "landRaiders1", "type": "Land Raider",	"quantity": 3}],
+																		"min": 1, "max": 1 },
+
+						{ "id": "Commander",		"type": "optional",	"units":	[{"id": "commander1", "type": "Supreme Commander",	"quantity": 1, "addPoints":[{"each":1, "points":100}]},
+																					 {"id": "commander2", "type": "Captain",	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander3", "type": "Chaplain",	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander4", "type": "Librarian",	"quantity": 1, "addPoints":[{"each":1, "points":50}]}],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Hunter",			"type": "optional",	"units":	[{"id": "hunter1", "type": "Hunter", 	"quantity": 1,  "addPoints":[{"each":1, "points":75}]}],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Vindicators",		"type": "optional",	"units":	[{"id": "vindicator1", "type": "Vindicator",	"quantity": 1, "addPoints":[{"min":1, "max":1, "points":50}]},
+																					 {"id": "vindicator2", "type": "Vindicator",	"quantity": 2, "addPoints":[{"min":2, "max":2, "points":75}]}],
+																		"min": 0, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 325
+				},
+				{
+					"name": "Land Speeders",
+					"composition": [
+						{ "id": "Land Speeders",	"type": "core",		"units": 	[{"id": "landSpeeders1", "type": "Land Speeder",			"quantity": 1},
+																					 {"id": "landSpeeders2", "type": "Land Speeder Tornado",	"quantity": 1}, 
+																					 {"id": "landSpeeders3", "type": "Land Speeder Typhoon",	"quantity": 1, "addPoints":[{"min":1, "max":2, "points":25}, 
+																																											{"min":3, "max":5, "points":50}]}],
+																		"min": 5, "max": 5 },
+
+						{ "id": "Commander",		"type": "optional",	"units":	[{"id": "commander1", "type": "Supreme Commander",	"quantity": 1, "addPoints":[{"each":1, "points":100}]},
+																					 {"id": "commander2", "type": "Captain",	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander3", "type": "Chaplain",	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander4", "type": "Librarian",	"quantity": 1, "addPoints":[{"each":1, "points":50}]}],
+																		"min": 0, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 200
+				},
+				{
+					"name": "Landing Craft",
+					"composition": [
+						{ "id": "Landing Craft",		"type": "core",		"units": 	[{"id": "landingCraft1", "type": "Landing Craft",	"quantity": 1}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 350
+				},
+				{
+					"name": "Predators",
+					"composition": [
+						{ "id": "Predators",		"type": "core",		"units": 	[{"id": "predators1", "type": "Predator Destructor",	"quantity": 1}, 
+																					 {"id": "predators2", "type": "Predator Annihilator",	"quantity": 1}],
+																		"min": 4, "max": 4 },
+
+						{ "id": "Commander",		"type": "optional",	"units":	[{"id": "commander1", "type": "Supreme Commander",	"quantity": 1, "addPoints":[{"each":1, "points":100}]},
+																					 {"id": "commander2", "type": "Captain", 	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander3", "type": "Chaplain",	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander4", "type": "Librarian",	"quantity": 1, "addPoints":[{"each":1, "points":50}]}],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Hunter",			"type": "optional",	"units":	[{"id": "hunter1", "type": "Hunter", 	"quantity": 1,  "addPoints":[{"each":1, "points":75}]}],
+																		"min": 0, "max": 1 },
+																		
+						{ "id": "Vindicators",		"type": "optional",	"units":	[{"id": "vindicator1", "type": "Vindicator",	"quantity": 1, "addPoints":[{"min":1, "max":1, "points":50}]},
+																					 {"id": "vindicator2", "type": "Vindicator",	"quantity": 2, "addPoints":[{"min":2, "max":2, "points":75}]}],
+																		"min": 0, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 250
+				},
+				{
+					"name": "Scouts",
+					"composition": [
+						{ "id": "Scouts",		"type": "core",		"units": 	[{"id": "scouts1", "type": "Scouts",	"quantity": 4}],
+																		"min": 1, "max": 1,
+																		"consume": 1,
+																		"transports": [ {"type":"Rhino", "capacity":2},
+																						{"type":"Razorback (THB)", "capacity":1, "addPoints":25},
+																						{"type":"Razorback (TL)", "capacity":1, "addPoints":25}
+																						]},
+
+						{ "id": "Sniper",		"type": "optional",	"units":	[{"id": "sniper1", "type": "Sniper",	"quantity": 2, "addPoints":[{"min":2, "max":2, "points":25}]},
+																				 {"id": "sniper2", "type": "Sniper",	"quantity": 4, "addPoints":[{"min":4, "max":4, "points":50}]}],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Commander",		"type": "optional",	"units":	[{"id": "commander1", "type": "Supreme Commander",	"quantity": 1, "addPoints":[{"each":1, "points":100}]},
+																					 {"id": "commander2", "type": "Captain", 	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander3", "type": "Chaplain",	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander4", "type": "Librarian",	"quantity": 1, "addPoints":[{"each":1, "points":50}]}],
+																		"min": 0, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 175
+				},
+				{
+					"name": "Spacecraft",
+					"composition": [
+						{ "id": "Spacecraft",		"type": "core",		"units": 	[{"id": "spacecraft1", "type": "Strike Cruiser",	"quantity": 1},
+																					 {"id": "spacecraft2", "type": "Battle Barge",		"quantity": 1, "addPoints":[{"min":1, "max":1, "points":75}]}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 200
+				},
+				{
+					"name": "Tacticals",
+					"composition": [
+						{ "id": "Tacticals",		"type": "core",		"units":	[{"id": "tacticals1", "type": "Tacticals",	"quantity": 6}],
+																		"min": 1, "max": 1,
+																		"consume": 1,
+																		"transports": [ {"type":"Rhino", "capacity":2, "default": true},
+																						{"type":"Razorback (THB)", "capacity":1, "addPoints":25},
+																						{"type":"Razorback (TL)", "capacity":1, "addPoints":25},
+																						{"type":"Land Raider", "capacity":2, "addPoints":50},
+																						{"type":"Drop Pod", "capacity":1}
+																						]},
+
+						{ "id": "Dreadnoughts",		"type": "optional",	"units":	[{"id": "dreadnoughts1", "type": "Dreadnought Tactical", "quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "dreadnoughts2", "type": "Dreadnought Hellfire", "quantity": 1, "addPoints":[{"each":1, "points":50}]}],
+																		"min": 0, "max": 2,
+																		"consume": 2,
+																		"transports": [{"type":"Dreadnought Drop Pod", "capacity":2}]},
+
+						{ "id": "Commander",		"type": "optional",	"units":	[{"id": "commander1", "type": "Supreme Commander",	"quantity": 1, "addPoints":[{"each":1, "points":100}]},
+																					 {"id": "commander2", "type": "Captain", 	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander3", "type": "Chaplain",	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander4", "type": "Librarian",	"quantity": 1, "addPoints":[{"each":1, "points":50}]}],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Hunter",			"type": "optional",	"units":	[{"id": "hunter1", "type": "Hunter", 	"quantity": 1,  "addPoints":[{"each":1, "points":75}]}],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Vindicators",		"type": "optional",	"units":	[{"id": "vindicator1", "type": "Vindicator",	"quantity": 1, "addPoints":[{"min":1, "max":1, "points":50}]},
+																					 {"id": "vindicator2", "type": "Vindicator",	"quantity": 2, "addPoints":[{"min":2, "max":2, "points":75}]}],
+																		"min": 0, "max": 1 }
+					],
+					"conditions": [
+						{
+							"what": ["Drop Pod", "Rhino"]
+						},
+						{
+							"what": ["Drop Pod", "Razorback (THB)"]
+						},
+						{
+							"what": ["Drop Pod", "Razorback (TL)"]
+						},
+						{
+							"what": ["Drop Pod", "Land Raider"]
+						},
+						{
+							"what": ["Drop Pod", "Hunter"]
+						},
+						{
+							"what": ["Drop Pod", "Vindicator"]
+						}
+					],
+					"points": 275
+				},
+				{
+					"name": "Terminators",
+					"composition": [
+						{ "id": "Terminators",		"type": "core",		"units": 	[{"id": "terminators1", "type": "Terminators",	"quantity": 4}],
+																		"min": 1, "max": 1,
+																		"consume": 2,
+																		"transports": [ {"type":"Land Raider", "capacity":2, "addPoints":50} ] },
+
+						{ "id": "Commander",		"type": "optional",	"units":	[{"id": "commander1", "type": "Supreme Commander",	"quantity": 1, "addPoints":[{"each":1, "points":100}]},
+																					 {"id": "commander2", "type": "Captain", 	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander3", "type": "Chaplain",	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander4", "type": "Librarian",	"quantity": 1, "addPoints":[{"each":1, "points":50}]}],
+																		"min": 0, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 350
+				},
+				{
+					"name": "Thunderhawk",
+					"composition": [
+						{ "id": "Thunderhawk",		"type": "core",		"units": 	[{"id": "thunderhawk1", "type": "Thunderhawk",	"quantity": 1}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 200
+				},
+				{
+					"name": "Vindicators",
+					"composition": [
+						{ "id": "Vindicators",		"type": "core",		"units": 	[{"id": "vindicators1", "type": "Vindicator",	"quantity": 4}],
+																		"min": 1, "max": 1 },
+
+						{ "id": "Commander",		"type": "optional",	"units":	[{"id": "commander1", "type": "Supreme Commander",	"quantity": 1, "addPoints":[{"each":1, "points":100}]},
+																					 {"id": "commander2", "type": "Captain",	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander3", "type": "Chaplain",	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander4", "type": "Librarian",	"quantity": 1, "addPoints":[{"each":1, "points":50}]}],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Hunter",			"type": "optional",	"units":	[{"id": "hunter1", "type": "Hunter", 	"quantity": 1,  "addPoints":[{"each":1, "points":75}]}],
+																		"min": 0, "max": 1 },
+																		
+						{ "id": "Vindicators",		"type": "optional",	"units":	[{"id": "vindicator2", "type": "Vindicator",	"quantity": 1, "addPoints":[{"min":1, "max":1, "points":50}]},
+																					 {"id": "vindicator3", "type": "Vindicator",	"quantity": 2, "addPoints":[{"min":2, "max":2, "points":75}]}],
+																		"min": 0, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 225
+				},
+				{
+					"name": "Whirlwinds",
+					"composition": [
+						{ "id": "Whirlwinds",		"type": "core",		"units": 	[{"id": "whirlwind1", "type": "Whirlwind",	"quantity": 4}],
+																		"min": 1, "max": 1 },
+
+						{ "id": "Commander",		"type": "optional",	"units":	[{"id": "commander1", "type": "Supreme Commander",	"quantity": 1, "addPoints":[{"each":1, "points":100}]},
+																					 {"id": "commander2", "type": "Captain",	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander3", "type": "Chaplain",	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																					 {"id": "commander4", "type": "Librarian",	"quantity": 1, "addPoints":[{"each":1, "points":50}]}],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Hunter",			"type": "optional",	"units":	[{"id": "hunter1", "type": "Hunter", 	"quantity": 1,  "addPoints":[{"each":1, "points":75}]}],
+																		"min": 0, "max": 1 }																		
+					],
+					"conditions": [
+					],
+					"points": 300
+				}
+			]
+		},
+		{
+			"name": "Imperial Allies",
+			"notes":"(Max 33%)",
+			"formations": [
+				{
+					"name": "Marauder Squadron",
+					"composition": [
+						{ "id": "Marauder Squadron",		"type": "core",		"units": 	[{"id": "marauder1", "type": "Marauder",	"quantity": 2}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 250
+				},
+				{
+					"name": "Thunderbolt Squadron",
+					"composition": [
+						{ "id": "Thunderbolt Squadron",		"type": "core",		"units": 	[{"id": "thunderbolts1", "type": "Thunderbolt",	"quantity": 2}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 150
+				},
+				{
+					"name": "Reaver Titan",
+					"composition": [
+						{ "id": "Reaver Titan",		"type": "core",		"units": 	[{"id": "reavertitan1", "type": "Reaver Titan",	"quantity": 1}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 650
+				},
+				{
+					"name": "Warhound Titan",
+					"composition": [
+						{ "id": "Warhound Titan",		"type": "core",		"units": 	[{"id": "warhoundtitan1", "type": "Warhound Titan",	"quantity": 1}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 275
+				},
+				{
+					"name": "Warhound Titan Pack",
+					"composition": [
+						{ "id": "Warhound Titan Pack",		"type": "core",		"units": 	[{"id": "warhoundtitanpack1", "type": "Warhound Titan",	"quantity": 2}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 500
+				},
+				{
+					"name": "Warlord Titan",
+					"composition": [
+						{ "id": "Warlord Titan",		"type": "core",		"units": 	[{"id": "warlordtitan1", "type": "Warlord Titan",	"quantity": 1}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 825
+				}
+			]
+		}
+	],
+	"formationConstraints": [
+		{"label": "- selected items max not exceed maximum number" },
+		{"type": "max",           "min":0, "max":1, "from":["Spacecraft"]},
+
+		{"label": "- any combination of the listed elements must not exceed percentage" },
+		{"type": "percent",       "maxPercent":33, "name":"Allies", "from":["Thunderbolt Squadron","Marauder Squadron", "Reaver Titan", "Warhound Titan", "Warhound Titan Pack", "Warlord Titan"]}
+
+	],
+	"upgradeConstraints": [
+		{ "type": "max",          "max":1, "perArmy":true, "from":["Supreme Commander"]}
+	]
+
+	
+}
+

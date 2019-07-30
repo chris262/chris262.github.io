@@ -1,0 +1,240 @@
+{
+	"faction": "Imperial Knights",
+	"id": "Knight World",
+	"version": "0.01",
+	"by": "chris262",
+
+	"includeFiles": {
+		"primary": "./statList/IK.json",
+		"allies": [
+					"./statList/ImperialAllies.json",
+					"./statList/ImperialNavy.json"
+					],
+		"common": [
+					"./statList/Reference.json"
+					]
+	},
+    "specialRules": [
+		{ "title": "Bravery" },
+		{ "title": "Fortifications" }
+	],
+	"sections":	[
+		{
+			"name": "Knight Households",
+			"formations": [
+				{
+					"name": "Knight Household",
+					"composition": [
+						{ "id": "Knights",		"type": "core",		"units":	[	{"id": "knights1", "type": "Paladins",	"quantity": 1},
+																					{"id": "knights2", "type": "Errants",	"quantity": 1, "addPoints":[{"each":1, "points":10}]}],
+																		"min": 3, "max": 3},
+
+						{ "id": "Knights",		"type": "optional",		"units":	[	{"id": "knights3", "type": "Paladins",	"quantity": 1, "addPoints":[{"each":1, "points":90}]},
+																						{"id": "knights4", "type": "Errants",	"quantity": 1, "addPoints":[{"each":1, "points":100}]}],
+																		"min": 0, "max": 3},
+
+						{ "id": "Commander",		"type": "optional",	"units":	[	{"id": "commander1", "type": "Seneschal",	"quantity": 1, "addPoints":[{"each":1, "points":25}]},
+																						{"id": "commander2", "type": "Baron",	"quantity": 1, "addPoints":[{"each":1, "points":200}]}],
+																		"min": 0, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 300
+				}		
+			]
+		},
+		{
+			"name": "Support Households",	
+			"notes":"(Up to one Support Household may be included for every Knight Household taken)",
+			"formations": [
+				{
+					"name": "Custodian Household",
+					"composition": [
+						{ "id": "Custodians",		"type": "core",		"units": 	[	{"id": "knights1", "type": "Castellan",	"quantity": 1},
+																						{"id": "knights2", "type": "Crusader",	"quantity": 1}],
+																		"min": 3, "max": 3},
+
+						{ "id": "Custodians",		"type": "optional",		"units":	[	{"id": "knights3", "type": "Castellan",	"quantity": 1, "addPoints":[{"each":1, "points":115}]},
+																							{"id": "knights4", "type": "Crusader",	"quantity": 1, "addPoints":[{"each":1, "points":115}]} ],
+																		"min": 0, "max": 1},
+
+						{ "id": "Commander",		"type": "optional",	"units":	[	{"id": "commander1", "type": "Seneschal",	"quantity": 1, "addPoints":[{"each":1, "points":25}]} ],
+																		"min": 0, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 375
+				},
+				{
+					"name": "Lancer Household",
+					"composition": [
+						{ "id": "Lancers",		"type": "core",		"units":	[	{"id": "knights1", "type": "Lancers",	"quantity": 1}],
+																		"min": 3, "max": 3},
+
+						{ "id": "Lancers",		"type": "optional",		"units":	[	{"id": "knights2", "type": "Lancers",	"quantity": 1, "addPoints":[{"each":1, "points":90}]}],
+																		"min": 0, "max": 3},
+
+						{ "id": "Commander",		"type": "optional",	"units":	[	{"id": "commander1", "type": "Seneschal",	"quantity": 1, "addPoints":[{"each":1, "points":25}]},
+																						{"id": "commander2", "type": "Baron",	"quantity": 1, "addPoints":[{"each":1, "points":200}]}],
+																		"min": 0, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 300
+				},
+				{
+					"name": "Warden Household",
+					"composition": [
+						{ "id": "Wardens",		"type": "core",		"units": 	[{"id": "warden1", "type": "Warden",	"quantity": 1}],
+																		"min": 3, "max": 3},
+
+						{ "id": "Wardens",		"type": "optional",		"units":	[	{"id": "warden2", "type": "Warden",	"quantity": 1, "addPoints":[{"each":1, "points":85}]}],
+																		"min": 0, "max": 3},
+
+						{ "id": "Commander",		"type": "optional",	"units":	[	{"id": "commander1", "type": "Seneschal",	"quantity": 1, "addPoints":[{"each":1, "points":25}]} ],
+																		"min": 0, "max": 1 }
+																		
+					],
+					"conditions": [
+					],
+					"points": 275
+				}
+			]
+		},
+		{
+			"name": "Support Levy",	
+			"notes":"(Up to one Support Levy may be included for every Knight Household taken)",
+			"formations": [
+				{
+					"name": "AA Gun Battery",
+					"composition": [
+						{ "id": "AA Guns",		"type": "core",	"units":	[{"id": "aaguns1", "type": "AA Gun Platform",	"quantity": 3}],
+																		"min": 1, "max": 1 },
+
+						{ "id": "DeployAs",		"type": "core",	"units":	[{"id": "deployas1", "type": "Gun Transport",	"quantity": 3},
+																			 {"id": "deployas2", "type": "Gun Emplacements",	"quantity": 3}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 125
+				},
+				{
+					"name": "Howitzer Battery",
+					"composition": [
+						{ "id": "Howitzer",		"type": "core",	"units":	[{"id": "aaguns1", "type": "Howitzer Platform",	"quantity": 3}],
+																		"min": 1, "max": 1 },
+
+						{ "id": "DeployAs",		"type": "core",	"units":	[{"id": "deployas1", "type": "Gun Transport",	"quantity": 3},
+																			 {"id": "deployas2", "type": "Gun Emplacements",	"quantity": 3}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 175
+				},
+				{
+					"name": "Infantry Platoon",
+					"composition": [
+						{ "id": "Infantry",		"type": "core",		"units": 	[{"id": "infantry1", "type": "Infantry",	"quantity": 8}],
+																		"min": 1, "max": 1},
+
+						{ "id": "Commander",	"type": "core",		"units":	[	{"id": "commander1", "type": "Command",	"quantity": 1 }],
+																		"min": 1, "max": 1},
+
+						{ "id": "Infantry",		"type": "optional",	"units":	[	{"id": "infantry2", "type": "Infantry",	"quantity": 2, "addPoints":[{"min":2, "max":2, "points":25}]},
+																						{"id": "infantry3", "type": "Infantry",	"quantity": 4, "addPoints":[{"min":4, "max":4, "points":50}]}],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Weapons",		"type": "optional",	"units":	[	{"id": "weapons1", "type": "Rapier",	"quantity": 1, "addPoints":[{"each":1, "points":25}]},
+																					{"id": "weapons2", "type": "Thudd Gun",	"quantity": 1, "addPoints":[{"each":1, "points":25}]}],
+																		"min": 0, "max": 3 },
+
+						{ "id": "Sniper",		"type": "optional",	"units":	[	{"id": "sniper1", "type": "Sniper",	"quantity": 1, "addPoints":[{"each":1, "points":25}]} ],
+																		"min": 0, "max": 2 },
+
+						{ "id": "Commander",		"type": "optional",	"units":	[	{"id": "commander1", "type": "Aspirant",	"quantity": 1, "addPoints":[{"each":1, "points":25}]} ],
+																		"min": 0, "max": 1 },
+																		
+						{ "id": "Fortifications",	"type": "optional",	"units":	[	{"id": "fortifications1", "type": "Fortifications",	"quantity": 1, "addPoints":[{"each":1, "points":50}]} ],
+																		"min": 0, "max": 1 }
+
+					],
+					"conditions": [
+					],
+					"points": 175
+				},
+				{
+					"name": "Rough Rider Platoon",
+					"composition": [
+						{ "id": "Rough Riders",		"type": "core",		"units": 	[{"id": "riders1", "type": "Rough Riders",	"quantity": 6}],
+																		"min": 1, "max": 1},
+
+						{ "id": "Commander",		"type": "optional",	"units":	[	{"id": "commander1", "type": "Aspirant",	"quantity": 1, "addPoints":[{"each":1, "points":25}]} ],
+																		"min": 0, "max": 1 }
+																		
+					],
+					"conditions": [
+					],
+					"points": 150
+				}
+			]
+		},
+		{
+			"name": "Imperial Allies",
+			"notes":"(Max 33%)",
+			"formations": [
+				{
+					"name": "Marauder Squadron",
+					"composition": [
+						{ "id": "Marauder Squadron",		"type": "core",		"units": 	[{"id": "marauder1", "type": "Marauder",	"quantity": 2}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 250
+				},
+				{
+					"name": "Thunderbolt Squadron",
+					"composition": [
+						{ "id": "Thunderbolt Squadron",		"type": "core",		"units": 	[{"id": "thunderbolts1", "type": "Thunderbolt",	"quantity": 2}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 150
+				}
+			]
+		}
+	],
+	"formationConstraints": [
+		{"label": "- selected items max not exceed maximum number" },
+		{"type": "max",           "min":0, "max":1, "from":["Regimental HQ","Deathstrike Silo"]},
+
+		{"label": "- any combination of the listed elements must not exceed percentage" },
+		{"type": "percent",       "maxPercent":33, "name":"Allies", "from":["Thunderbolt Squadron","Heavy Marauder", "Reaver Titan", "Warhound Titan", "Warhound Titan Pack", "Warlord Titan"]},
+
+		{"label": "- selected items max not only be included in set point blocks" },
+		{"type": "maxpoints",		"value":1500, "from":["Death Rider Company"]},
+
+		{"label": "- 'foreach' x take 'from' y up to/including max" },
+		{"type": "ratio",			"max":2,       "name":"Secondary Detachments", 
+			"forEach":["Death Rider Company","Infantry Company","Regimental HQ"], 
+			"from":["Artillery Support Company","Deathstrike Silo","Death Rider Scout Platoon","Engineers Platoon","Grenadiers Platoon","Heavy Support Battery",
+					"Heavy Tank Platoon","Self-Propelled Heavy Support","Super-Heavy Tank Platoon","Super-Heavy Tank Support Company","Tank Platoon"] },
+
+		{"label": "- 'foreach' x take 'from' y can only be 1 of each secondary type per primary" },
+		{"type": "ratioLimit",			"max":1,       "name":"Secondary Detachments", 
+			"forEach":["Death Rider Company","Infantry Company","Regimental HQ"], 
+			"from":["Artillery Support Company","Deathstrike Silo","Death Rider Scout Platoon","Engineers Platoon","Grenadiers Platoon","Heavy Support Battery",
+					"Heavy Tank Platoon","Self-Propelled Heavy Support","Super-Heavy Tank Platoon","Super-Heavy Tank Support Company","Tank Platoon"] }
+
+	],
+	"upgradeConstraints": [
+		{"label": "- 'foreach' x take 'from' y up to/including max" },
+		{"type": "ratioupgrade",	"max":3,       "name":"Primary Upgrades", "forEach":["Death Rider Company","Infantry Company","Regimental HQ"], "from":["Fire Support","Gorgon Transports","Heavy Tank","Hellhounds","Infantry Platoon","Tanks"] }
+	]
+
+	
+}
+

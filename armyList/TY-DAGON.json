@@ -1,0 +1,145 @@
+{
+	"faction": "Tyranids",
+	"id": "Hive Fleet Dagon",
+	"version": "0.01",
+	"by": "chris262",
+
+
+	"sections":	[
+		{ 
+			"name": "Detachments",	
+			"formations": [
+
+				{
+					"name": "Nexus Swarm",
+					"composition": [
+						{ "id": "Dominatrix",		"type": "core",		"units":	[{"id": "dominatrix1", "type": "Dominatrix",	"quantity": 1}],
+																		"min": 1, "max": 1},
+
+						{ "id": "Gaunts",			"type": "core",		"units":	[{"id": "gaunts1", "type": "Termagaunt",	"quantity": 1}, 
+																					 {"id": "gaunts2", "type": "Hormagaunt",	"quantity": 1},
+																					 {"id": "gaunts3", "type": "Gargoyle",		"quantity": 1}],
+																		"min": 2, "max": 2},
+
+						{ "id": "Gaunts",			"type": "optional",		"units":	[{"id": "gaunts11", "type": "Termagaunt",	"quantity": 1}, 
+																					 {"id": "gaunts12", "type": "Hormagaunt",	"quantity": 1},
+																					 {"id": "gaunts13", "type": "Gargoyle",		"quantity": 1}],
+																		"min": 0, "max": 2}
+
+					],
+					"conditions": [
+					],
+					"points": 400
+				},
+				{
+					"name": "Minor Swarm",
+					"composition": [
+						{ "id": "Warriors",			"type": "core",		"units":	[{"id": "warrior1", "type": "Tyranid Warrior",	"quantity": 1},
+																					 {"id": "warrior2", "type": "Zoanthrope",	"quantity": 1},
+																					 {"id": "warrior3", "type": "Tyranid Warrior Shrike",	"quantity": 1}],
+																		"min": 3, "max": 3},
+
+						{ "id": "Gaunts",			"type": "core",		"units":	[{"id": "gaunts1", "type": "Termagaunt",	"quantity": 1}, 
+																					 {"id": "gaunts2", "type": "Hormagaunt",	"quantity": 1},
+																					 {"id": "gaunts3", "type": "Gargoyle",		"quantity": 1}],
+																		"min": 2, "max": 2},
+
+						{ "id": "Carnifex",			"type": "optional",	"units":	[{"id": "carnifex1", "type": "Carnifex", 	"quantity": 1, "addPoints":[{"each":1, "points":50}]}],
+																		"min": 0, "max": 2 }
+					],
+					"conditions": [
+					],
+					"points": 200
+				}	
+			]
+		},
+		{
+			"name": "Common Independant Swarms",
+			"notes":"(One Common Independent Swarm may be taken for each Primary Synapse Swarm.<br>Max 33% of the list may be taken from this section)",
+			"formations": [
+				{
+					"name": "Genestealer Swarm",
+					"composition": [
+						{ "id": "Genestealers",		"type": "core",		"units": 	[{"id": "genestealers1", "type": "Genestealers",	"quantity": 6}],
+																		"min": 1, "max": 1 },
+						{ "id": "Broodlord",		"type": "core",		"units": 	[{"id": "genestealers2", "type": "Broodlord",	"quantity": 1}],
+																		"min": 1, "max": 1 },
+						{ "id": "Genestealers",		"type": "optional",		"units": 	[{"id": "genestealers3", "type": "Genestealers",		"quantity": 1, "addPoints":[{"each":1, "points":25}]}],
+																		"min": 0, "max": 3 }
+					],
+					"conditions": [
+					],
+					"points": 175
+				},
+				{
+					"name": "Lictor Swarm",
+					"composition": [
+						{ "id": "Lictor",		"type": "core",		"units": 	[{"id": "lictor1", "type": "Lictor",	"quantity": 5}],
+																		"min": 1, "max": 1 },
+						{ "id": "Lictor",		"type": "optional",		"units": 	[{"id": "lictor2", "type": "Lictor",		"quantity": 1, "addPoints":[{"each":1, "points":25}]}],
+																		"min": 0, "max": 2 }
+					],
+					"conditions": [
+					],
+					"points": 225
+				}
+			]
+		},
+		{
+			"name": "Rare Independant Swarms",
+			"notes":"(One Rare Independent Swarm may be taken for each Primary Synapse Swarm.<br>Max 33% of the list may be taken from this section)",
+			"formations": [
+
+				{
+					"name": "Bio-Titan",
+					"composition": [
+						{ "id": "Bio-Titan",		"type": "core",		"units": 	[{"id": "biotitan1", "type": "Hierophant",	"quantity": 1},
+																					 {"id": "biotitan2", "type": "Hydraphant",		"quantity": 1, "addPoints":[{"min":1, "max":1, "points":225}]}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 300
+				},
+				{
+					"name": "Bio-Vessel",
+					"composition": [
+						{ "id": "Bio-Vessel",		"type": "core",		"units": 	[{"id": "biovessel1", "type": "Razorfiend",	"quantity": 1},
+																					 {"id": "biovessel2", "type": "Hive Ship",		"quantity": 1, "addPoints":[{"min":1, "max":1, "points":100}]}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 150
+				}
+				
+			]
+		}
+	],
+	"formationConstraints": [
+		{"label": "- selected items max not exceed maximum number" },
+		{"type": "max",           "min":0, "max":1, "from":["Nexus Swarm"]},
+		{"type": "max",           "min":0, "max":1, "from":["Bio-Vessel"]},
+
+		{"label": "- any combination of the listed elements must not exceed percentage" },
+		{"type": "percent",       "maxPercent":33, "name":"Common Independant", "from":["Genestealer Swarm","Lictor Swarm"]},
+
+		{"label": "- any combination of the listed elements must not exceed percentage" },
+		{"type": "percent",       "maxPercent":33, "name":"Rare Independant", "from":["Bio-Titan","Bio-Vessel"]},
+
+		{"label": "- 'foreach' x take 'from' y up to/including max" },
+		{"type": "ratio",         "max":2,       "name":"Secondary Detachments", "forEach":["Nexus Swarm","Major Swarm","Minor Swarm"], "from":["Hive Swarm","Attack Swarm","Infestation Swarm","Harasser Swarm"] },
+
+		{"label": "- 'foreach' x take 'from' y up to/including max" },
+		{"type": "ratio",         "max":2,       "name":"Common Detachments", "forEach":["Nexus Swarm","Major Swarm","Minor Swarm"], "from":["Genestealer Swarm","Lictor Swarm"] },
+
+		{"label": "- 'foreach' x take 'from' y up to/including max" },
+		{"type": "ratio",         "max":1,       "name":"Rare Detachments", "forEach":["Nexus Swarm","Major Swarm","Minor Swarm"], "from":["Bio-Titan","Bio-Vessel"] }
+	],
+	"upgradeConstraints": [
+		{ "type": "max",          "max":1, "perArmy":true, "from":["SupremeCmd"]}
+	]
+
+	
+}
+

@@ -1,0 +1,474 @@
+{
+	"name": "Imperial Knights Forces",
+	"armyStats": {
+		"strategy": "Imperial Knights armies have a Strategy Rating of 2",
+		"initiative": "All formations have an Initiative Rating of 2+"
+	},
+	"specialRules": [
+		{
+			"title": "Bravery",
+			"description": [
+				"Knight Household and Support Household formations receive a +1 modifier to their action test when carrying out an engage action, and a +1 modifier to their rally test."
+			]
+		},
+		{
+			"title": "Fortifications",
+			"description": [
+				"Fortifications must be set up after objectives but before spacecraft and garrisons. The only exception to this are fortifications that come with a formation (i.e. they are part of that formation’s“units”). These fortifications are set up with the formation they are part of and once set up cease to be“units”in that formation.",
+				"Fortifications may be set up anywhere a vehicle may normally be placed but may not be transported. They count as having a move of zero and may be set up on the table as “garrisons”. When setting up fortifications with multiple parts (or fortifications that come with a formation) they must be set up as a legal formation (see Formations).",
+				"Once set up, fortifications may be used by any unit (including enemy units)."
+			]
+		}		
+	],
+	"units": [
+	
+		{
+			"name": "Baneblade",
+			"type": "WE",
+			"speed": 15,
+			"armour": 4,
+			"cc": 6,
+			"ff": 4,
+			"weapons": [
+				"Baneblade Battle Cannon",
+				"Autocannon",
+				"Demolisher",
+				"2|Lascannon",
+				"3|Heavy Bolter"
+			],
+			"specialRules": [
+				"DC3",
+				"Reinforced Armour"
+			]
+		},
+		{
+			"name": "Bombard",
+			"type": "AV",
+			"speed": 20,
+			"armour": 6,
+			"cc": 6,
+			"ff": 5,
+			"weapons": [
+				"Siege Mortar",
+				"Heavy Bolter"
+			]
+		},
+		{
+			"name": "Commissar",
+			"type": "CH",
+			"weapons": [
+				"Power Weapon"
+			],
+			"specialRules": [
+				"Fearless",
+				"Inspiring",
+				"Leader"
+			]
+		},
+		{
+			"name": "Commander",
+			"type": "INF",
+			"speed": 15,
+			"armour": 6,
+			"cc": 4,
+			"ff": 5,
+			"weapons": [
+				"Twin Heavy Stubber"
+			],
+			"specialRules": [
+				"Commander"
+			]
+		},
+		{
+			"name": "Centaur",
+			"type": "LV",
+			"speed": 35,
+			"armour": 6,
+			"cc": 6,
+			"ff": 6,
+			"weapons": [
+				"Heavy Stubber"
+			]
+		},
+		{
+			"name": "Death Riders",
+			"type": "INF",
+			"speed": 20,
+			"armour": 5,
+			"cc": 4,
+			"ff": 6,
+			"weapons": [
+				"Laspistols",
+				"Power Lances"
+			],
+			"specialRules": [
+				"Infiltrator",
+				"Mounted",
+				"Walker"
+			]
+		},
+		{
+			"name": "Death Rider Scouts",
+			"type": "INF",
+			"speed": 20,
+			"armour": 5,
+			"cc": 4,
+			"ff": 6,
+			"weapons": [
+				"Laspistols",
+				"Power Lances"
+			],
+			"specialRules": [
+				"Infiltrator",
+				"Mounted",
+				"Walker",
+				"Scout"
+			]
+		},
+		{
+			"name": "Deathstrike Silo",
+			"type": "WE",
+			"speed": 0,
+			"armour": 4,
+			"cc": 6,
+			"ff": 4,
+			"weapons": [
+				"Deathstrike Missiles"
+			],
+			"specialRules": [
+				"DC2"
+			]
+		},
+		{
+			"name": "Earthshaker Platform",
+			"type": "LV",
+			"speed": 0,
+			"armour": 6,
+			"cc": 6,
+			"ff": 6,
+			"weapons": [
+				"Earthshaker"
+			]
+		},
+		{
+			"name": "Engineers",
+			"type": "INF",
+			"speed": 15,
+			"armour": 5,
+			"cc": 4,
+			"ff": 5,
+			"weapons": [
+				"Mole Launcher"
+			]
+		},
+		{
+			"name": "Fire Support",
+			"type": "INF",
+			"speed": 15,
+			"cc": 5,
+			"ff": 4,
+			"weapons": [
+				"Twin Heavy Stubber",
+				"Autocannon"
+			]
+		},
+		{
+			"name": "Gorgon (HB)",
+			"type": "WE",
+			"speed": 20,
+			"armour": 4,
+			"cc": 6,
+			"ff": 5,
+			"weapons": [
+				"2|Twin Heavy Stubber",
+				"2|Twin Heavy Bolter"
+			],
+			"specialRules": [
+				"DC3",
+				"Reinforced Armour",
+				"Walker"
+			]
+		},
+		{
+			"name": "Gorgon (M)",
+			"type": "WE",
+			"speed": 20,
+			"armour": 4,
+			"cc": 6,
+			"ff": 6,
+			"weapons": [
+				"2|Twin Heavy Stubber",
+				"Gorgon Mortar"
+			],
+			"specialRules": [
+				"DC3",
+				"Reinforced Armour",
+				"Walker"
+			]
+		},
+		{
+			"name": "Grenadiers",
+			"type": "INF",
+			"speed": 15,
+			"armour": 5,
+			"cc": 5,
+			"ff": 4,
+			"weapons": [
+				"Heavy Flamer"
+			],
+			"specialRules": [
+				"scout"
+			]
+		},
+		{
+			"name": "Gun Emplacement",
+			"type": "Special",
+			"speed": 0,
+			"specialRules": [
+				"INF: 4+ cover save",
+				"VEH: 5+ cover save"
+			]
+		},
+		{
+			"name": "Hades Breaching Drill",
+			"type": "Special",
+			"speed": 0,
+			"specialRules": [
+				"Transport",
+				"Tunneler"
+			]
+		},
+		{
+			"name": "Heavy AA Platform",
+			"type": "LV",
+			"speed": 0,
+			"armour": 6,
+			"cc": 6,
+			"ff": 6,
+			"weapons": [
+				"Heavy AA Gun"
+			]
+		},
+		{
+			"name": "Hydra Platform",
+			"type": "LV",
+			"speed": 0,
+			"armour": 6,
+			"cc": 6,
+			"ff": 6,
+			"weapons": [
+				"2|Hydra Autocannon"
+			]
+		},		
+		{
+			"name": "Hellhound",
+			"type": "AV",
+			"speed": 30,
+			"armour": 4,
+			"cc": 6,
+			"ff": 3,
+			"weapons": [
+				"Inferno Cannon",
+				"Heavy Bolter"
+			]
+		},
+		{
+			"name": "Infantry",
+			"type": "INF",
+			"speed": 15,
+			"cc": 5,
+			"ff": 5,
+			"weapons": [
+				"Lasguns"
+			]
+		},
+		{
+			"name": "Leman Russ",
+			"type": "AV",
+			"speed": 20,
+			"armour": 4,
+			"cc": 6,
+			"ff": 4,
+			"weapons": [
+				"Battle Cannon",
+				"Lascannon",
+				"2|Heavy Bolter"
+			],
+			"specialRules": [
+				"Reinforced Armour"
+			]
+		},		
+		{
+			"name": "Leman Russ Demolisher",
+			"type": "AV",
+			"speed": 20,
+			"armour": 4,
+			"cc": 6,
+			"ff": 3,
+			"weapons": [
+				"Demolisher",
+				"Lascannon",
+				"2|Plasma Cannon"
+			],
+			"specialRules": [
+				"Reinforced Armour"
+			]
+		},
+		{
+			"name": "Leman Russ Vanquisher",
+			"type": "AV",
+			"speed": 20,
+			"armour": 4,
+			"cc": 6,
+			"ff": 3,
+			"weapons": [
+				"Vanquisher",
+				"Lascannon",
+				"2|Plasma Cannon"
+			],
+			"specialRules": [
+				"Reinforced Armour"
+			]
+		},
+		{
+			"name": "Macharius",
+			"type": "WE",
+			"speed": 15,
+			"armour": 5,
+			"cc": 4,
+			"ff": 6,
+			"weapons": [
+				"2|Battle Cannon",
+				"2|Heavy Bolter",
+				"Twin Heavy Stubber"
+			],
+			"specialRules": [
+				"DC2",
+				"Reinforced Armour"
+			]
+		},
+		{
+			"name": "Macharius (V)",
+			"type": "WE",
+			"speed": 15,
+			"armour": 5,
+			"cc": 4,
+			"ff": 6,
+			"weapons": [
+				"2|Vanquisher",
+				"2|Heavy Bolter",
+				"Twin Heavy Stubber"
+			],
+			"specialRules": [
+				"DC2",
+				"Reinforced Armour"
+			]
+		},
+		{
+			"name": "Macharius (VMB)",
+			"type": "WE",
+			"speed": 15,
+			"armour": 5,
+			"cc": 4,
+			"ff": 6,
+			"weapons": [
+				"Vulcan Mega-Bolter",
+				"2|Heavy Bolter",
+				"Twin Heavy Stubber"
+			],
+			"specialRules": [
+				"DC2",
+				"Reinforced Armour"
+			]
+		},
+		{
+			"name": "Medusa Platform",
+			"type": "LV",
+			"speed": 0,
+			"armour": 6,
+			"cc": 6,
+			"ff": 6,
+			"weapons": [
+				"Medusa Siege Gun"
+			]
+		},
+		{
+			"name": "Shadowsword",
+			"type": "WE",
+			"speed": 15,
+			"armour": 4,
+			"cc": 6,
+			"ff": 5,
+			"weapons": [
+				"Volcano Cannon",
+				"2|Heavy Bolter"
+			],
+			"specialRules": [
+				"DC3",
+				"Reinforced Armour"
+			]
+		},
+		{
+			"name": "Stormblade",
+			"type": "WE",
+			"speed": 15,
+			"armour": 4,
+			"cc": 6,
+			"ff": 5,
+			"weapons": [
+				"Plasma Blastgun",
+				"Heavy Bolter",
+				"2|Lascannon",
+				"3|Twin Heavy Bolter"
+			],
+			"specialRules": [
+				"DC3",
+				"Reinforced Armour"
+			]
+		},
+		{
+			"name": "Stormsword",
+			"type": "WE",
+			"speed": 15,
+			"armour": 4,
+			"cc": 6,
+			"ff": 4,
+			"weapons": [
+				"Siege Cannon",
+				"Heavy Bolter",
+				"2|Heavy Flamer",
+				"2|Heavy Bolter"
+			],
+			"specialRules": [
+				"DC3",
+				"Reinforced Armour"
+			]
+		},
+		{
+			"name": "Thunderer",
+			"type": "AV",
+			"speed": 20,
+			"armour": 4,
+			"cc": 6,
+			"ff": 5,
+			"weapons": [
+				"Demolisher"
+			],
+			"specialRules": [
+				"Reinforced Armour",
+				"Thick Rear Armour"
+			]
+		},	
+		{
+			"name": "Trojan",
+			"type": "AV",
+			"speed": 20,
+			"armour": 6,
+			"cc": 6,
+			"ff": 6,
+			"weapons": [
+				"Heavy Bolter"
+			]
+		}
+	]		
+}

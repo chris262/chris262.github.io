@@ -1,0 +1,393 @@
+{
+	"faction": "Imperial Guard",
+	"id": "Death Korps of Krieg",
+	"version": "0.01",
+	"by": "chris262",
+
+	"includeFiles": {
+		"primary": "./statList/IG.json",
+		"allies": [
+					"./statList/ImperialAllies.json",
+					"./statList/ImperialNavy.json"
+					],
+		"common": [
+					"./statList/Reference.json"
+					]
+	},
+    "specialRules": [
+		{ "title": "Commissars" },
+		{ "title": "Fortifications" }
+	],
+	"sections":	[
+		{
+			"name": "Primary Detachments",
+			"formations": [
+				{
+					"name": "Death Rider Company",
+					"composition": [
+						{ "id": "Death Riders",		"type": "core",		"units":	[{"id": "deathriders1", "type": "Death Riders",	"quantity": 12}],
+																		"min": 1, "max": 1},
+
+						{ "id": "Fire Support",		"type": "optional",	"units":	[{"id": "firesupport1", "type": "Fire Support",	"quantity": 4, "addPoints":[{"min":4, "max":4, "points":75}]} ],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Heavy Tank",		"type": "optional",	"units":	[{"id": "heavytanks1", "type": "Macharius",	"quantity": 1, "addPoints":[{"min":1, "max":1, "points":125}]} ],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Hellhounds",		"type": "optional",	"units":	[{"id": "hellhounds1", "type": "Hellhound",	"quantity": 3, "addPoints":[{"min":3, "max":3, "points":100}]} ],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Infantry Platoon",	"type": "optional",	"units":	[{"id": "infantry2", "type": "Infantry",	"quantity": 10, "addPoints":[{"min":10, "max":10, "points":175}]} ],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Tanks",			"type": "optional",		"units":	[{"id": "tanks1", "type": "Tank Squadron",	"quantity": 3, "addPoints":[{"min":3, "max":3, "points":175}]}],
+																		"min": 1, "max": 1,
+																		"consume": 1,
+																		"transports": [ {"type":"Leman Russ", "capacity":1, "addPoints":20},
+																						{"type":"Leman Russ Demolisher", "capacity":1, "addPoints":20},
+																						{"type":"Thunderer", "capacity":1, "default": true}
+																						]}
+					],
+					"conditions": [
+					],
+					"points": 250
+				},
+				{
+					"name": "Infantry Company",
+					"composition": [
+						{ "id": "Infantry",			"type": "core",		"units":	[{"id": "infantry1", "type": "Infantry",	"quantity": 19}],
+																		"min": 1, "max": 1},
+						{ "id": "Commander",		"type": "core",	"units":	[{"id": "commander1", "type": "Commander",	"quantity": 1}],
+																		"min": 1, "max": 1 },
+						{ "id": "Commissar",		"type": "core",	"units":	[{"id": "commissar1", "type": "Commissar",	"quantity": 1}],
+																		"min": 1, "max": 1 },
+
+						{ "id": "Fire Support",		"type": "optional",	"units":	[{"id": "firesupport1", "type": "Fire Support",	"quantity": 4, "addPoints":[{"min":4, "max":4, "points":75}]} ],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Gorgon Transports",	"type": "optional",	"units":	[{"id": "gorgon1", "type": "Gorgon (HB)",  "quantity": 2,  "addPoints":[{"min":2, "max":2, "points":200}]},
+																						 {"id": "gorgon2", "type": "Gorgon (M)",   "quantity": 2,  "addPoints":[{"min":2, "max":2, "points":225}]} ],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Heavy Tank",		"type": "optional",	"units":	[{"id": "heavytanks1", "type": "Macharius",	"quantity": 1, "addPoints":[{"min":1, "max":1, "points":125}]} ],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Hellhounds",		"type": "optional",	"units":	[{"id": "hellhounds1", "type": "Hellhound",	"quantity": 3, "addPoints":[{"min":3, "max":3, "points":100}]} ],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Infantry Platoon",	"type": "optional",	"units":	[{"id": "infantry2", "type": "Infantry",	"quantity": 10, "addPoints":[{"min":10, "max":10, "points":175}]} ],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Tanks",			"type": "optional",		"units":	[{"id": "tanks1", "type": "Tank Squadron",	"quantity": 3, "addPoints":[{"min":3, "max":3, "points":175}]}],
+																		"min": 1, "max": 1,
+																		"consume": 1,
+																		"transports": [ {"type":"Leman Russ", "capacity":1, "addPoints":20},
+																						{"type":"Leman Russ Demolisher", "capacity":1, "addPoints":20},
+																						{"type":"Thunderer", "capacity":1, "default": true}
+																						]}
+					],
+					"conditions": [
+					],
+					"points": 300
+				},
+				{
+					"name": "Regimental HQ",
+					"composition": [
+						{ "id": "Infantry",		"type": "core",		"units":	[{"id": "infantry1", "type": "Infantry",	"quantity": 19}],
+																		"min": 1, "max": 1},
+						{ "id": "Commander",		"type": "core",	"units":	[{"id": "commander1", "type": "Supreme Commander",	"quantity": 1}],
+																		"min": 1, "max": 1 },
+						{ "id": "Commissar",		"type": "core",	"units":	[{"id": "commissar1", "type": "Commissar",	"quantity": 1}],
+																		"min": 1, "max": 1 },
+
+						{ "id": "Fire Support",		"type": "optional",	"units":	[{"id": "firesupport1", "type": "Fire Support",	"quantity": 4, "addPoints":[{"min":4, "max":4, "points":75}]} ],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Gorgon Transports",	"type": "optional",	"units":	[{"id": "gorgon1", "type": "Gorgon (HB)",  "quantity": 2,  "addPoints":[{"min":2, "max":2, "points":200}]},
+																						 {"id": "gorgon2", "type": "Gorgon (M)", 	     "quantity": 2,  "addPoints":[{"min":2, "max":2, "points":225}]} ],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Heavy Tank",		"type": "optional",	"units":	[{"id": "heavytanks1", "type": "Macharius",	"quantity": 1, "addPoints":[{"min":1, "max":1, "points":125}]} ],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Hellhounds",		"type": "optional",	"units":	[{"id": "hellhounds1", "type": "Hellhound",	"quantity": 3, "addPoints":[{"min":3, "max":3, "points":100}]} ],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Infantry Platoon",	"type": "optional",	"units":	[{"id": "infantry2", "type": "Infantry",	"quantity": 10, "addPoints":[{"min":10, "max":10, "points":175}]} ],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Tanks",			"type": "optional",		"units":	[{"id": "tanks1", "type": "Tank Squadron",	"quantity": 3, "addPoints":[{"min":3, "max":3, "points":175}]}],
+																		"min": 1, "max": 1,
+																		"consume": 1,
+																		"transports": [ {"type":"Leman Russ", "capacity":1, "addPoints":20},
+																						{"type":"Leman Russ Demolisher", "capacity":1, "addPoints":20},
+																						{"type":"Thunderer", "capacity":1, "default": true}
+																						]}
+					],
+					"conditions": [
+					],
+					"points": 400
+				}				
+			]
+		},
+		{
+			"name": "Secondary Detachments",	
+			"notes":"(Up to two Secondary Detachments may be included for every Primary Detachment included)",
+			"formations": [
+				{
+					"name": "Artillery Support Company",
+					"composition": [
+						{ "id": "Earthshakers",		"type": "core",	"units":	[{"id": "earthshakers1", "type": "Earthshaker Platform",	"quantity": 9}],
+																		"min": 1, "max": 1 },
+
+						{ "id": "DeployAs",		"type": "core",	"units":	[{"id": "deployas1", "type": "Gun Emplacement",	"quantity": 9},
+																			 {"id": "deployas2", "type": "Trojan",	"quantity": 9}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 600
+				},
+				{
+					"name": "Deathstrike Silo",
+					"composition": [
+						{ "id": "Deathstrike Silo",		"type": "core",		"units": 	[{"id": "deathstrikesilo1", "type": "Deathstrike Silo",	"quantity": 1}],
+																		"min": 1, "max": 1}
+					],
+					"conditions": [
+					],
+					"points": 250
+				},
+				{
+					"name": "Death Rider Scout Platoon",
+					"composition": [
+						{ "id": "Death Rider Scout",		"type": "core",		"units": 	[{"id": "deathriderscout1", "type": "Death Rider Scouts",	"quantity": 6}],
+																		"min": 1, "max": 1}
+					],
+					"conditions": [
+					],
+					"points": 150
+				},
+				{
+					"name": "Engineers Platoon",
+					"composition": [
+						{ "id": "Engineers",		"type": "core",	"units":	[{"id": "engineers1", "type": "Engineers",	"quantity": 8}],
+																		"min": 1, "max": 1 },
+
+						{ "id": "Breaching Drill",		"type": "core",	"units":	[{"id": "engineers2", "type": "Hades Breaching Drill",	"quantity": 1}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 250
+				},
+				{
+					"name": "Grenadiers Platoon",
+					"composition": [
+						{ "id": "Grenadiers",		"type": "core",		"units":	[{"id": "grenadiers1", "type": "Grenadiers",	"quantity": 8}],
+																		"min": 1, "max": 1 },
+
+						{ "id": "Gorgon Transport",	"type": "optional",	"units":	[{"id": "grenadiers2", "type": "Gorgon (HB)",  "quantity": 1,  "addPoints":[{"min":1, "max":1, "points":75}]} ],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Centaurs",			"type": "optional",	"units":	[{"id": "grenadiers3", "type": "Centaur",	"quantity": 8, "addPoints":[{"min":8, "max":8, "points":75}]} ],
+																		"min": 0, "max": 1 }
+					],
+					"conditions": [
+						{
+							"what": ["Gorgon (HB)", "Centaur"]
+						}
+					],
+					"points": 225
+				},
+				{
+					"name": "Heavy Support Battery",
+					"composition": [
+						{ "id": "Gun Emplacements",		"type": "core",	"units":	[{"id": "heavysupport1", "type": "Gun Emplacement",	"quantity": 3},
+																					 {"id": "heavysupport2", "type": "Trojan",	"quantity": 3, "addPoints":[{"min":3, "max":3, "points":25}]}],
+																		"min": 1, "max": 1 },
+
+						{ "id": "Weapons Platforms",	"type": "core",	"units": 	[{"id": "Weapons Platform", "type": "Weapons Platform",	"quantity": 3}],
+																		"min": 1, "max": 1,
+																		"consume": 1,
+																		"transports": [ {"type":"Heavy AA Platform", "capacity":1, "default": true},
+																						{"type":"Hydra Platform", "capacity":1},
+																						{"type":"Earthshaker Platform", "capacity":3, "addPoints":75},
+																						{"type":"Medusa Platform", "capacity":3, "addPoints":150} ]}
+					],
+					"conditions": [
+						{
+							"what": ["Heavy AA Platform", "Earthshaker Platforms"]
+						},
+						{
+							"what": ["Heavy AA Platform", "Medusa Platforms"]
+						},
+						{
+							"what": ["Hydra Platform", "Earthshaker Platforms"]
+						},
+						{
+							"what": ["Hydra Platform", "Medusa Platforms"]
+						}
+					],
+					"points": 125
+				},
+				{
+					"name": "Heavy Tank Platoon",
+					"composition": [
+						{ "id": "Macharius Command",		"type": "core",	"units":	[{"id": "heavytank1", "type": "Macharius (V)",	"quantity": 1},
+																						 {"id": "heavytank2", "type": "Macharius (VMB)",	"quantity": 1}],
+																		"min": 1, "max": 1 },
+
+						{ "id": "Macharius",				"type": "core",	"units":	[{"id": "heavytank3", "type": "Macharius",	"quantity": 2}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 325
+				},
+				{
+					"name": "Self-Propelled Heavy Support",
+					"composition": [
+						{ "id": "Bombards",		"type": "core",		"units": 	[{"id": "bombards1", "type": "Bombard",	"quantity": 3}],
+																		"min": 1, "max": 1}
+					],
+					"conditions": [
+					],
+					"points": 150
+				},
+				{
+					"name": "Super-Heavy Tank Platoon",
+					"composition": [
+						{ "id": "Super-Heavy Tank Platoon",		"type": "core",	"units":	[{"id": "tank1", "type": "Baneblade",	"quantity": 1},
+																				 {"id": "tank2", "type": "Shadowsword",	"quantity": 1},
+																				 {"id": "tank3", "type": "Stormblade",	"quantity": 1},
+																				 {"id": "tank4", "type": "Stormsword",	"quantity": 1}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 200
+				},
+				{
+					"name": "Super-Heavy Tank Support Company",
+					"composition": [
+						{ "id": "Super-Heavy Tank Support Company",		"type": "core",	"units":	[{"id": "tank1", "type": "Baneblade",	"quantity": 1},
+																				 {"id": "tank2", "type": "Shadowsword",	"quantity": 1},
+																				 {"id": "tank3", "type": "Stormblade",	"quantity": 1},
+																				 {"id": "tank4", "type": "Stormsword",	"quantity": 1}],
+																		"min": 3, "max": 3 }
+					],
+					"conditions": [
+					],
+					"points": 500
+				},
+				{
+					"name": "Tank Platoon",
+					"composition": [
+						{ "id": "Tank Platoon",		"type": "core",	"units":	[{"id": "tank1", "type": "Leman Russ",				"quantity": 1, "addPoints":[{"each":1, "points":20}]},
+																				 {"id": "tank2", "type": "Leman Russ Demolisher",	"quantity": 1, "addPoints":[{"each":1, "points":20}]},
+																				 {"id": "tank3", "type": "Leman Russ Vanquisher",	"quantity": 1, "addPoints":[{"each":1, "points":50}]},
+																				 {"id": "tank4", "type": "Thunderer",				"quantity": 1}],
+																		"min": 6, "max": 6 }
+					],
+					"conditions": [
+						{
+							"type": "limit", "from": "Leman Russ Vanquisher", "max": 1
+						}
+					],
+					"points": 280
+				}
+			]
+		},
+		{
+			"name": "Imperial Allies",
+			"notes":"(Max 33%)",
+			"formations": [
+				{
+					"name": "Heavy Marauder",
+					"composition": [
+						{ "id": "Heavy Marauder",		"type": "core",		"units": 	[{"id": "marauder1", "type": "Heavy Marauder",	"quantity": 1}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 250
+				},
+				{
+					"name": "Thunderbolt Squadron",
+					"composition": [
+						{ "id": "Thunderbolt Squadron",		"type": "core",		"units": 	[{"id": "thunderbolts1", "type": "Thunderbolt",	"quantity": 2}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 150
+				},
+				{
+					"name": "Reaver Titan",
+					"composition": [
+						{ "id": "Reaver Titan",		"type": "core",		"units": 	[{"id": "reavertitan1", "type": "Reaver Titan",	"quantity": 1}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 650
+				},
+				{
+					"name": "Warhound Titan",
+					"composition": [
+						{ "id": "Warhound Titan",		"type": "core",		"units": 	[{"id": "warhoundtitan1", "type": "Warhound Titan",	"quantity": 1}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 275
+				},
+				{
+					"name": "Warhound Titan Pack",
+					"composition": [
+						{ "id": "Warhound Titan Pack",		"type": "core",		"units": 	[{"id": "warhoundtitanpack1", "type": "Warhound Titan",	"quantity": 2}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 500
+				},
+				{
+					"name": "Warlord Titan",
+					"composition": [
+						{ "id": "Warlord Titan",		"type": "core",		"units": 	[{"id": "warlordtitan1", "type": "Warlord Titan",	"quantity": 1}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 825
+				}
+			]
+		}
+	],
+	"formationConstraints": [
+		{"label": "- selected items max not exceed maximum number" },
+		{"type": "max",           "min":0, "max":1, "from":["Regimental HQ","Deathstrike Silo"]},
+
+		{"label": "- any combination of the listed elements must not exceed percentage" },
+		{"type": "percent",       "maxPercent":33, "name":"Allies", "from":["Thunderbolt Squadron","Heavy Marauder", "Reaver Titan", "Warhound Titan", "Warhound Titan Pack", "Warlord Titan"]},
+
+		{"label": "- selected items max not only be included in set point blocks" },
+		{"type": "maxpoints",		"value":1500, "from":["Death Rider Company"]},
+
+		{"label": "- 'foreach' x take 'from' y up to/including max" },
+		{"type": "ratio",			"max":2,       "name":"Secondary Detachments", 
+			"forEach":["Death Rider Company","Infantry Company","Regimental HQ"], 
+			"from":["Artillery Support Company","Deathstrike Silo","Death Rider Scout Platoon","Engineers Platoon","Grenadiers Platoon","Heavy Support Battery",
+					"Heavy Tank Platoon","Self-Propelled Heavy Support","Super-Heavy Tank Platoon","Super-Heavy Tank Support Company","Tank Platoon"] }
+
+	],
+	"upgradeConstraints": [
+		{"label": "- 'foreach' x take 'from' y up to/including max" },
+		{"type": "ratioupgrade",	"max":3,       "name":"Primary Upgrades", "forEach":["Death Rider Company","Infantry Company","Regimental HQ"], "from":["Fire Support","Gorgon Transports","Heavy Tank","Hellhounds","Infantry Platoon","Tanks"] }
+	]
+
+	
+}
+

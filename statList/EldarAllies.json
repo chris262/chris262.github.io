@@ -1,0 +1,126 @@
+{
+	"name": "Eldar Allies",
+	"specialRules": [
+	],
+	"units": [
+
+		{
+			"name": "Nightwing Interceptor",
+			"type": "AC",
+			"speed": "Fighter",
+			"armour": 4,
+			"weapons": [
+				"AC Twin Shuriken Cannon FxF",
+				"AC Twin Bright Lance FxF"
+			]
+		},
+		{
+			"name": "Phoenix Bomber",
+			"type": "AC",
+			"speed": "Fighter-Bomber",
+			"armour": 5,
+			"weapons": [
+				"AC Twin Shuriken Cannon FxF",
+				"AC Pulse Laser FxF",
+				"AC Night Spinner FxF"
+			]
+		},
+		{
+			"name": "Vampire Raider",
+			"type": "AC/WE",
+			"speed": "Bomber",
+			"armour": 5,
+			"cc": 6,
+			"ff": 4,
+			"weapons": [
+				"2|AC Pulse Laser FxF",
+				"AC Scatter Laser FxF"
+			],
+			"specialRules": [
+				"DC2",
+				"Planetfall",
+				"Reinforced Armour"
+			]
+		},
+		{
+			"name": "Wraithship",
+			"type": "SC",
+			"weapons": [
+				"0-1|Orbital Bombardment 4BP",
+				"0-1|Pin-Point Attack"
+			]
+		},
+		{
+			"name": "Dragonship",
+			"type": "SC",
+			"weapons": [
+				"0-1|Orbital Bombardment 8BP",
+				"0-2|Pin-Point Attack"
+			]
+		},
+		{
+			"name": "Revenant Titan",
+			"type": "WE",
+			"speed": 35,
+			"armour": 5,
+			"cc": 4,
+			"ff": 4,
+			"weapons": [
+				"2|Revenant Pulse Laser",
+				"2|Eldar Missile Launcher"
+			],
+			"specialRules": [
+				"DC3",
+				"Fearless",
+				"Holofield",
+				"Jump Packs",
+				"Walker"
+			]
+		},
+		{
+			"name": "Phantom Titan",
+			"type": "WE",
+			"speed": 25,
+			"armour": 5,
+			"cc": 3,
+			"ff": 3,
+			"weapons": [
+				"1-2|Titan Pulsar",
+				"0-1|Titan Power Fist",
+				"Twin Eldar Missile Launcher"
+			],
+			"specialRules": [
+				"DC6",
+				"Fearless",
+				"Holofield",
+				"Leader",
+				"Reinforced Armour",
+				"Walker"
+			]
+		},
+		{
+			"name": "Warlock Titan",
+			"type": "WE",
+			"speed": 25,
+			"armour": 5,
+			"cc": 3,
+			"ff": 3,
+			"weapons": [
+				"Psychic Lance",
+				"0-1|Titan Pulsar",
+				"0-1|Titan Power Fist",
+				"2|Twin Eldar Missile Launcher"
+			],
+			"specialRules": [
+				"DC6",
+				"Farsight",
+				"Fearless",
+				"Holofield",
+				"Inspiring",
+				"Leader",
+				"Reinforced Armour",
+				"Walker"
+			]
+		}
+	]
+}

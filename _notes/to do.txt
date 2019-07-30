@@ -1,0 +1,31 @@
+//  TO DO LIST
+// ///////////
+
+  o  test map a bunch of armies/formations to see what weird conditions break things
+	DONE:	SM-CA		SM-BT		EL-BT		IG-dkok
+	NEXT:	IK-knights 		what's done: formation and untis in place
+			TY-dagon		what's done: partial formations and units
+
+
+	THEN:	SM-iron hands,   CH-chaos marines,	OR-feral
+
+  o  need a better way of objectifying the content. it's not terriby but would probably be easier if things were more objecty.
+     doesn't need to be as much as armyBuilder where everything is run off objects.  jquery solves a lot of shit AB was trying to accomplish.
+	 things like constrains might be easier.
+  o (pertaining last)  it might be helpful to be able to look up items 'easier', so making a function to find a formation in the selections/reference. and/or finding a unit or unit types within the selections.
+
+
+  o stats view [wip]
+  o stats file [wip]
+
+
+  o stats ->  table layout (sizes etc)
+              'more' version to include specialRule descriptions  (slow, reinforces, invul save etc)
+              'transport' details for transporting units   (2 regular, 1 terminator etc)
+
+  o  rename 'transport' to 'something not transport'    it's now multi-purpose (i.e. dkok 'tank suqadron' upgrade on infantry)   'subselection' or something
+
+
+  o on grid screen considering adding button  to remove 'main' selection option. additionally add buttons to up/down the position of the item (shuffle index).
+     i do not want to drag drop things at all.
+

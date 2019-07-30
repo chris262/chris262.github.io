@@ -1,0 +1,333 @@
+{
+	"faction": "Eldar",
+	"id": "Biel-Tan Craftworld",
+	"version": "0.01",
+	"by": "chris262",
+
+	"includeFiles": {
+		"primary": "./statList/EL.json",
+		"allies": [
+					"./statList/EldarAllies.json"
+					],
+		"common": [
+					"./statList/Reference.json"
+					]
+	},
+    "specialRules": [
+		{ "title": "May Not Garrison" },
+		{ "title": "Hit & Run" },
+		{ "title": "Farsight" },
+		{ "title": "Eldar Technology - Holofield" },
+		{ "title": "Eldar Technology - Lance" },
+		{ "title": "Eldar Technology - Webway Portal" }
+	],
+	"sections":	[
+		{
+			"name": "Biel-Tan Craftworld Individuals",
+			"formations": [
+				{
+					"name": "Avatar",
+					"composition": [
+						{ "id": "Avatar",		"type": "core",		"units":	[	{"id": "avatar1", "type": "Avatar",	"quantity": 1 }],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 0
+				},
+				{
+					"name": "Wraithgate",
+					"composition": [
+						{ "id": "Wraithgate",			"type": "core",			"units":	[	{"id": "wraithgate1", "type": "Wraithgate",	"quantity": 1}],
+																		"min": 1, "max": 1}
+					],
+					"conditions": [			
+					],
+					"points": 50
+				}
+			]
+		},
+		{
+			"name": "Biel-Tan Craftworld Warhosts",
+			"formations": [
+				{
+					"name": "Aspect Warriors",
+					"composition": [
+						{ "id": "Aspect Warriors",		"type": "core",		"units":	[	{"id": "aspect1", "type": "Dark Reapers",	"quantity": 1},
+																							{"id": "aspect2", "type": "Dire Avengers",	"quantity": 1},
+																							{"id": "aspect3", "type": "Fire Dragons",	"quantity": 1},
+																							{"id": "aspect4", "type": "Howling Banshees",	"quantity": 1},
+																							{"id": "aspect5", "type": "Shining Spears",	"quantity": 1},
+																							{"id": "aspect6", "type": "Striking Scorpions",	"quantity": 1},
+																							{"id": "aspect7", "type": "Swooping Hawks",	"quantity": 1},
+																							{"id": "aspect8", "type": "Warp Spiders",	"quantity": 1 }],
+																		"min": 8, "max": 8 },
+
+						{ "id": "Commander",		"type": "optional",		"units":	[	{"id": "commander1", "type": "Exarch",	"quantity": 1, "addPoints":[{"each":1, "points":25}]},
+																							{"id": "commander2", "type": "Autarch",	"quantity": 1, "addPoints":[{"each":1, "points":50}]}],
+																		"min": 0, "max": 2 },
+
+						{ "id": "Transports",		"type": "optional",	"units":	[	{"id":"transport1", "type":"Wave Serpent", "quantity":1, "addPoints":[{"each":1, "points":25}]},
+																						{"id":"transport2", "type":"Falcon", "quantity":1, "addPoints":[{"each":1, "points":50}]} ],
+																		"min": 0, "max": 8 }
+					],
+					"conditions": [
+						{
+							"what": ["Shining Spears", "Wave Serpent"]
+						},
+						{
+							"what": ["Shining Spears", "Falcon"]
+						},
+						{
+							"what": ["Swooping Hawks", "Wave Serpent"]
+						},
+						{
+							"what": ["Swooping Hawks", "Falcon"]
+						}
+					],
+					"points": 300
+				},
+				{
+					"name": "Guardians",
+					"composition": [
+						{ "id": "Farseer",			"type": "core",			"units":	[	{"id": "farseer1", "type": "Farseer",	"quantity": 1}],
+																		"min": 1, "max": 1},
+
+						{ "id": "Guardians",		"type": "core",		"units":	[	{"id": "guardians1", "type": "Guardians",	"quantity": 4}],
+																		"min": 1, "max": 1},
+
+						{ "id": "Guardian Heavy",	"type": "core",	"units":	[	{"id": "guardians2", "type": "Guardians",	"quantity": 1},
+																					{"id": "guardians3", "type": "Heavy Weapon Platform",	"quantity": 1}],
+																		"min": 3, "max": 3 },
+
+						{ "id": "Guardian Support",	"type": "optional",	"units":	[ {"id": "guardian4", "type": "Support Weapon Platform",	"quantity": 1, "addPoints":[{"each":1, "points":50}]}],
+																		"min": 0, "max": 3 },
+
+						{ "id": "Wraithguard",		"type": "optional",	"units":	[	{"id": "wraithguard1", "type": "Wraithguard",	"quantity": 2, "addPoints":[{"each":1, "points":50}]},
+																						{"id": "wraithguard2", "type": "Wraithguard",	"quantity": 3, "addPoints":[{"each":1, "points":50}]}],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Wraithlord",		"type": "optional",	"units":	[	{"id": "wraithlord1", "type": "Wraithlord",	"quantity": 3, "addPoints":[{"min":3, "max":3, "points":175}]}],
+																		"min": 0, "max": 1 },
+
+						{ "id": "Transports",		"type": "optional",	"units":	[	{"id": "waveserpent1", "type":"Wave Serpent", "quantity":4, "addPoints":[{"min":4, "max":4, "points":200}]} ],
+																		"min": 0, "max": 1 }
+					],
+					"conditions": [
+						{
+							"what": ["Wraithlord", "Wave Serpent"]
+						},
+						{
+							"what": ["Wraithguard", "Wave Serpent"]
+						},
+						{
+							"what": ["Guardian Support", "Wave Serpent"]
+						}					
+					],
+					"points": 150
+				}
+			]
+		},
+		{
+			"name": "Biel-Tan Craftworld Troupes",	
+			"notes":"(Each warhost you include in the army allows you to field any three troupes)",
+			"formations": [
+				{
+					"name": "Engine of Vaul",
+					"composition": [
+						{ "id": "Engines",		"type": "core",		"units": 	[	{"id": "engine1", "type": "Cobra",	"quantity": 1},
+																						{"id": "engine2", "type": "Scorpion",	"quantity": 1},
+																						{"id": "engine3", "type": "Storm Serpent",	"quantity": 1}],
+																		"min": 1, "max": 1},
+
+						{ "id": "Engines Extra",		"type": "optional",		"units": 	[	{"id": "engine11", "type": "Cobra",	"quantity": 1, "addPoints":[{"each":1, "points":250}]},
+																							{"id": "engine12", "type": "Scorpion",	"quantity": 1, "addPoints":[{"each":1, "points":250}]},
+																							{"id": "engine13", "type": "Storm Serpent",	"quantity": 1, "addPoints":[{"each":1, "points":250}]}],
+																		"min": 0, "max": 2}
+					],
+					"conditions": [
+					],
+					"points": 250
+				},
+				{
+					"name": "Night Spinner",
+					"composition": [
+						{ "id": "Night Spinners",		"type": "core",		"units":	[	{"id": "nightspinners1", "type": "Night Spinner",	"quantity": 1}],
+																		"min": 3, "max": 3}
+					],
+					"conditions": [
+					],
+					"points": 175
+				},
+				{
+					"name": "Ranger",
+					"composition": [
+						{ "id": "Rangers",		"type": "core",		"units": 	[{"id": "rangers1", "type": "Rangers",	"quantity": 1}],
+																		"min": 4, "max": 4},
+
+						{ "id": "Rangers Extra",		"type": "optional",		"units":	[	{"id": "rangers2", "type": "Rangers",	"quantity": 1, "addPoints":[{"each":1, "points":25}]}],
+																		"min": 0, "max": 4}
+																		
+					],
+					"conditions": [
+					],
+					"points": 100
+				},
+				{
+					"name": "Swords of Vaul",
+					"composition": [
+						{ "id": "Swords",		"type": "core",		"units": 	[{"id": "sword1", "type": "Falcon",	"quantity": 1},
+																				 {"id": "sword2", "type": "Firestorm",	"quantity": 1},
+																				 {"id": "sword3", "type": "Fire Prism",	"quantity": 1, "addPoints":[{"each":1, "points":15}]}],
+																		"min": 5, "max": 5},
+
+						{ "id": "Swords Extra",		"type": "optional",		"units": 	[{"id": "sword11", "type": "Falcon",	"quantity": 1},
+																					 {"id": "sword12", "type": "Firestorm",	"quantity": 1},
+																					 {"id": "sword13", "type": "Fire Prism",	"quantity": 1, "addPoints":[{"each":1, "points":15}]}],
+																		"min": 0, "max": 1}
+					],
+					"conditions": [
+					],
+					"points": 250
+				},
+				{
+					"name": "Void Spinner",
+					"composition": [
+						{ "id": "Void Spinner",		"type": "core",		"units": 	[{"id": "voidspinner1", "type": "Void Spinner",	"quantity": 1}],
+																		"min": 1, "max": 1},
+																		
+						{ "id": "Void Spinner Extra",		"type": "optional",	"units":	[	{"id": "voidspinner2", "type": "Void Spinner",	"quantity": 1, "addPoints":[{"each":1, "points":275}]} ],
+																		"min": 0, "max": 2 }
+					],
+					"conditions": [
+					],
+					"points": 275
+				},
+				{
+					"name": "War Walker",
+					"composition": [
+						{ "id": "War Walkers",		"type": "core",		"units": 	[{"id": "warwalker1", "type": "War Walker",	"quantity": 1}],
+																		"min": 4, "max": 4},
+
+						{ "id": "War Walkers Extra",		"type": "optional",		"units":	[	{"id": "warwalker2", "type": "War Walkers",	"quantity": 1, "addPoints":[{"each":1, "points":25}]}],
+																		"min": 0, "max": 2}
+																		
+					],
+					"conditions": [
+					],
+					"points": 150
+				},
+				{
+					"name": "Windrider",
+					"composition": [
+						{ "id": "Windriders",		"type": "core",		"units": 	[	{"id": "windrider1", "type": "Jetbikes",	"quantity": 1},
+																						{"id": "windrider2", "type": "Vyper",	"quantity": 1}],
+																		"min": 6, "max": 6}
+																		
+					],
+					"conditions": [
+					],
+					"points": 200
+				}
+			]
+		},
+		{
+			"name": "Biel-Tan CraftworldSpacecraft, Aircraft & Titans",
+			"notes":"(Max 33%)",
+			"formations": [
+				{
+					"name": "Nightwings",
+					"composition": [
+						{ "id": "Nightwings",		"type": "core",		"units": 	[{"id": "nightwings1", "type": "Nightwing Interceptor",	"quantity": 3}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 300
+				},
+				{
+					"name": "Phantom Titan",
+					"composition": [
+						{ "id": "Phantom",		"type": "core",		"units": 	[{"id": "phantom1", "type": "Phantom Titan",	"quantity": 1}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 750
+				},
+				{
+					"name": "Phoenix",
+					"composition": [
+						{ "id": "Phoenix",		"type": "core",		"units": 	[{"id": "phoenix1", "type": "Phoenix Bomber",	"quantity": 3}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 325
+				},
+				{
+					"name": "Revenant Titans",
+					"composition": [
+						{ "id": "Revenants",		"type": "core",		"units": 	[{"id": "revenants1", "type": "Revenant Titan",	"quantity": 2}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 650
+				},
+				{
+					"name": "Spacecraft",
+					"composition": [
+						{ "id": "Spacecraft",		"type": "core",		"units": 	[{"id": "spacecraft1", "type": "Wraithship",	"quantity": 1},
+																					 {"id": "spacecraft2", "type": "Dragonship",	"quantity": 1, "addPoints":[{"min":1, "max":1, "points":150}]}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 150
+				},
+				{
+					"name": "Vampire",
+					"composition": [
+						{ "id": "Vampire",		"type": "core",		"units": 	[{"id": "phoenix1", "type": "Vampire Raider",	"quantity": 1}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 200
+				},
+				{
+					"name": "Warlock Titan",
+					"composition": [
+						{ "id": "Warlock",		"type": "core",		"units": 	[{"id": "phantom1", "type": "Warlock Titan",	"quantity": 1}],
+																		"min": 1, "max": 1 }
+					],
+					"conditions": [
+					],
+					"points": 850
+				}
+			]
+		}
+	],
+	"formationConstraints": [
+		{"label": "- selected items max not exceed maximum number" },
+		{"type": "max",           "min":0, "max":1, "from":["Avatar","Wraithgate"]},
+		{"type": "max",           "min":0, "max":1, "from":["Spacecraft"]},
+
+		{"label": "- any combination of the listed elements must not exceed percentage" },
+		{"type": "percent",       "maxPercent":33, "name":"Allies", "from":["Nightwings","Phoenix", "Vampire", "Spacecraft", "Revenant Titans", "Phantom Titan", "Warlock Titan"]},
+
+		{"label": "- 'foreach' x take 'from' y up to/including max" },
+		{"type": "ratio",			"max":3,       "name":"Secondary Detachments", 
+			"forEach":["Aspect Warriors","Guardians"], 
+			"from":["Engine of Vaul","Night Spinner","Ranger","Swords of Vaul","Void Spinner","War Walker","Windrider"] }
+
+	],
+	"upgradeConstraints": [
+		{"label": "- 'foreach' x take 'from' y up to/including max" },
+		{"type": "ratioupgrade",	"max":3,       "name":"Primary Upgrades", "forEach":["Death Rider Company","Infantry Company","Regimental HQ"], "from":["Fire Support","Gorgon Transports","Heavy Tank","Hellhounds","Infantry Platoon","Tanks"] }
+	]
+
+	
+}
+

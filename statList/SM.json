@@ -1,0 +1,555 @@
+{
+	"name": "Space Marine Forces",
+	"armyStats": {
+		"strategy": "Adeptus Astartes armies have a Strategy Rating of 5",
+		"initiative": "All formations have an Initiative Rating of 1+"
+	},
+	"specialRules": [
+		{
+			"title": "They Shall Know No Fear",
+			"description": [
+				"Space Marines are renowned for their tenacity and bravery. This is represented by the following rules:",
+				"* It takes 2 Blast Markers to suppress a Space Marine unit or kill a unit in a broken formation (ignore any leftover Blast Markers).",
+				"* Space Marine formations are only broken if they have 2 Blast Markers per unit in the formation.",
+				"* Space Marines formations only count half their number of Blaster markers in assault resolution (rounding down—note that assault resolution will not receive +1 for having no Blast Markers if the formation has 1 Blast Marker before rounding down). Halve the number of extra hits suffered by a Space Marine formation that loses an assault, rounding down in favour of the Space Marines.",
+				"* When a broken Space Marine formation rallies, it receives a number of Blast Markers equal to the number of units, rather than half this number. Space Marines with the Leader special ability remove 2 Blast Markers instead of 1"
+			]
+		},
+		{
+			"title": "Space Marine Transports",
+			"description": [
+				"The Space Marines are a highly mobile army. Because of this, the points cost of a detachment usually includes enough Rhino transport vehicles to transport it and any upgrades that have been taken. Determine the number of Rhinos needed after all upgrades have been purchased. The number of Rhinos will always be the minimum needed to carry the formation, you can’t take extras along to cover any losses!",
+				"Note that many formations don’t receive Rhinos, usually because they can’t fit into them. Detachments that come with Rhinos will be noted as having plus transport in the units section of the army list opposite.",
+				"Also note that you don’t have to take Rhinos if you don’t want to. If you’d rather field the formation on foot instead, so it can act as a garrison for example, or be transported in a Thunderhawk Gunship, then you may do so.",
+				"In addition, you may choose to replace a detachment’s Rhinos with Drop Pods. If you do this then the detachment will enter play in a Drop Pod using the rules for Planetfall (see Planetfall). Note that if you choose to do this you will also require at least one Space Marine Strike Cruiser or Battle Barge to deploy the drop pods from.",
+				"Before each game, after the opposing army is known but before objectives are placed, the Space Marine player may choose which formations with the plus transport aspect are deployed in Rhinos, Drop Pods or on foot. If the formation has any units unable to deploy in Drop Pods then that option cannot be selected."
+			]
+		},
+		{
+			"title": "Crusaders of the Emperor",
+			"description": [
+				"Black Templars are a crusading army and spend more time on board spacecraft than many other chapters and maintain their own Air Support forces rather than relying on ad hoc alliances.",
+				"A Black Templars army must include a spacecraft.",
+				"Air support units are treated as Black Templars units for all intents and purposes.",
+				"A maximum of up to a third of the points available to the army may be spent on air support formations.",
+				"The Black Templars player does not have to deploy any of his army within the spacecraft if they do not want to (in this case it is assumed that the Black Templars have already landed on the planet before the battle commences)."
+			]
+		},
+		{
+			"title": "Emperors Champion",
+			"description": [
+				"A Black Templars army must include one (only) Emperor’s Champion unit.",
+				"The Emperor’s Champion has the Sniper ability allowing it to choose which enemy model is hit, and gives that enemy a -1 save modifier."
+			]
+		},
+		{
+			"title": "Zeal",
+			"description": [
+				"Sword Brethren and Assault Terminator formations receive a +1 modifier to their action test when carrying out an Engage action."
+			]
+		}
+	],
+	"units": [
+		{
+			"name": "Assault Terminators",
+			"type": "INF",
+			"speed": 15,
+			"armour": 4,
+			"cc": 2,
+			"ff": 5,
+			"weapons": [
+				"Lightning Claws",
+				"Cyclone Launcher"
+			],
+			"specialRules": [
+				"Reinforced Armour",
+				"Teleport",
+				"Thick Rear Armour",
+				"Fearless"
+			]
+		},
+		{
+			"name": "Assaults",
+			"type": "INF",
+			"speed": 30,
+			"armour": 4,
+			"cc": 3,
+			"ff": 5,
+			"weapons": [
+				"Bolt Pistols"			
+			],
+			"specialRules": [
+				"Jump Packs"
+			]
+		},
+			{
+			"name": "Attack Bike",
+			"type": "LV",
+			"speed": 35,
+			"armour": 4,
+			"cc": 5,
+			"ff": 5,
+			"weapons": [
+				"Heavy Bolter"			
+			]
+		},
+		{
+			"name": "Battle Barge",
+			"type": "SC",
+			"weapons": [
+				"Orbital Bombardment 14BP"
+			]
+		},
+		{
+			"name": "Bike",
+			"type": "INF",
+			"speed": 35,
+			"armour": 4,
+			"cc": 3,
+			"ff": 4,
+			"weapons": [
+				"Twin Bolters"			
+			],
+			"specialRules": [
+				"Mounted"
+			]
+		},
+		{
+			"name": "Captain",
+			"type": "CH",
+			"weapons": [
+				"Power Weapon"			
+			],
+			"specialRules": [
+				"Commander",
+				"Invulnerable Save",
+				"Leader"
+			]
+		},
+		{
+			"name": "Chaplain",
+			"type": "CH",
+			"weapons": [
+				"Power Weapon"			
+			],
+			"specialRules": [
+				"Inspiring",
+				"Invulnerable Save",
+				"Leader"
+			]
+		},
+		{
+			"name": "Deathstorm Assault Cannon",
+			"type": "AV",
+			"speed": 0,
+			"armour": 5,
+			"ff": 5,
+			"weapons": [
+				"Assault Cannon"
+			],
+			"specialRules": [
+				"Planetfall"
+			]
+		},
+		{
+			"name": "Deathstorm Flack Launcher",
+			"type": "AV",
+			"speed": 0,
+			"armour": 5,
+			"ff": 5,
+			"weapons": [
+				"Flack Launcher"
+			],
+			"specialRules": [
+				"Planetfall"
+			]
+		},
+		{
+			"name": "Deathstorm Whirlwind",
+			"type": "AV",
+			"speed": 0,
+			"armour": 5,
+			"ff": 5,
+			"weapons": [
+				"Whirlwind"
+			],
+			"specialRules": [
+				"Planetfall"
+			]
+		},	
+		{
+			"name": "Devastators",
+			"type": "INF",
+			"speed": 15,
+			"armour": 4,
+			"cc": 5,
+			"ff": 3,
+			"weapons": [
+				"2|Missile Launcher"
+			]
+		},
+		{
+			"name": "Dreadnought Hellfire",
+			"type": "AV",
+			"speed": 15,
+			"armour": 3,
+			"cc": 4,
+			"ff": 4,
+			"weapons": [
+				"Missile Launcher",
+				"Twin Lascannon"
+			],
+			"specialRules": [
+				"Walker"
+			]
+		},
+		{
+			"name": "Dreadnought Tactical",
+			"type": "AV",
+			"speed": 15,
+			"armour": 3,
+			"cc": 4,
+			"ff": 4,
+			"weapons": [
+				"Assault Cannon",
+				"Power Fist"
+			],
+			"specialRules": [
+				"Walker"
+			]
+		},
+		{
+			"name": "Drop Pod",
+			"type": "Special",
+			"weapons": [
+				"Deathwind"
+			],
+			"specialRules": [
+				"Planetfall"
+			]
+		},	
+		{
+			"name": "Land Raider",
+			"type": "AV",
+			"speed": 25,
+			"armour": 4,
+			"cc": 6,
+			"ff": 4,
+			"weapons": [
+				"2|Twin Lascannon",
+				"Twin Heavy Bolter"
+			],
+			"specialRules": [
+				"Reinforced Armour",
+				"Thick Rear Armour"
+			]
+		},
+		{
+			"name": "Land Speeder",
+			"type": "LV",
+			"speed": 35,
+			"armour": 4,
+			"cc": 6,
+			"ff": 5,
+			"weapons": [
+				"Multi-Melta"
+			],
+			"specialRules": [
+				"Scout",
+				"Skimmer"
+			]
+		},
+		{
+			"name": "Land Speeder Tornado",
+			"type": "LV",
+			"speed": 35,
+			"armour": 4,
+			"cc": 6,
+			"ff": 5,
+			"weapons": [
+				"Assault Cannon",
+				"Heavy Bolter"
+			],
+			"specialRules": [
+				"Scout",
+				"Skimmer"
+			]
+		},
+		{
+			"name": "Land Speeder Typhoon",
+			"type": "LV",
+			"speed": 35,
+			"armour": 4,
+			"cc": 6,
+			"ff": 5,
+			"weapons": [
+				"Twin Typhoon Missile",
+				"Heavy Bolter"
+			],
+			"specialRules": [
+				"Scout",
+				"Skimmer"
+			]
+		},
+		{
+			"name": "Landing Craft",
+			"type": "AC/WE",
+			"speed": "Bomber",
+			"armour": 4,
+			"cc": 5,
+			"ff": 3,
+			"weapons": [
+				"2|AC Twin Lascannon",
+				"3|AC Twin Heavy Bolter"
+			],
+			"specialRules": [
+				"DC4",
+				"Fearless",
+				"Planetfall",
+				"Reinforced Armour"
+			]
+		},
+		{
+			"name": "Librarian",
+			"type": "CH",
+			"weapons": [
+				"Power Weapon",
+				"Smite"
+			],
+			"specialRules": [
+				"Invulnerable Save",
+				"Leader"
+			]
+		},
+		{
+			"name": "Neophytes",
+			"type": "INF",
+			"speed": 15,
+			"armour": 5,
+			"cc": 5,
+			"ff": 5,
+			"weapons": [
+				"Bolt Pistols"
+			],
+			"specialRules": [
+				"Expendable"
+			]
+		},
+		{
+			"name": "Predator Annihilator",
+			"type": "AV",
+			"speed": 30,
+			"armour": 4,
+			"cc": 6,
+			"ff": 5,
+			"weapons": [
+				"Twin Lascannon",
+				"2|Lascannon"
+			]
+		},			
+		{
+			"name": "Predator Destructor",
+			"type": "AV",
+			"speed": 30,
+			"armour": 4,
+			"cc": 6,
+			"ff": 3,
+			"weapons": [
+				"Autocannon",
+				"2|Heavy Bolter"
+			]
+		},
+		{
+			"name": "Razorback (THB)",
+			"type": "AV",
+			"speed": 30,
+			"armour": 5,
+			"cc": 6,
+			"ff": 5,
+			"weapons": [
+				"Twin Heavy Bolter"
+			]
+		},
+		{
+			"name": "Razorback (TL)",
+			"type": "AV",
+			"speed": 30,
+			"armour": 5,
+			"cc": 6,
+			"ff": 5,
+			"weapons": [
+				"Twin Lascannon"
+			]
+		},		
+		{
+			"name": "Rhino",
+			"type": "AV",
+			"speed": 30,
+			"armour": 5,
+			"cc": 6,
+			"ff": 6,
+			"weapons": [
+				"Storm Bolter"
+			]
+		},
+		{
+			"name": "Scouts",
+			"type": "INF",
+			"speed": 15,
+			"armour": 5,
+			"cc": 4,
+			"ff": 5,
+			"weapons": [
+				"Heavy Bolter"
+			],
+			"specialRules": [
+				"Infiltrator",
+				"Scout"
+			]
+		},
+		{
+			"name": "Sniper",
+			"type": "CH",
+			"specialRules": [
+				"Sniper"
+			]
+		},
+		{
+			"name": "Stormraven Gunship",
+			"type": "AV",
+			"speed": 35,
+			"armour": 5,
+			"cc": 6,
+			"ff": 4,
+			"weapons": [
+				"Twin Heavy Bolter",
+				"Twin Assault Cannon",
+				"Rockets",
+				"2|Bloodstrike Missiles"
+			],
+			"specialRules": [
+				"Planetfall",
+				"Reinforced Armour",
+				"Skimmer"
+			]
+		},
+		{
+			"name": "Stormraven Transport",
+			"type": "AV",
+			"speed": 35,
+			"armour": 5,
+			"cc": 6,
+			"ff": 4,
+			"weapons": [
+				"Twin Heavy Bolter",
+				"Twin Assault Cannon"
+			],
+			"specialRules": [
+				"Planetfall",
+				"Reinforced Armour",
+				"Skimmer"
+			]
+		},
+		{
+			"name": "Stormtalon",
+			"type": "AC",
+			"speed": "Fighter",
+			"armour": 5,
+			"weapons": [
+				"AC Twin Assault Cannon FwA",
+				"AC Twin Heavy Bolter FxF"
+			]
+		},
+		{
+			"name": "Strike Cruiser",
+			"type": "SC",
+			"weapons": [
+				"Orbital Bombardment 5BP"
+			]
+		},
+		{
+			"name": "Supreme Commander",
+			"type": "CH",
+			"weapons": [
+				"Power Weapon"			
+			],
+			"specialRules": [
+				"Supreme Commander",
+				"Invulnerable Save",
+				"Leader"
+			]
+		},
+		{
+			"name": "Tacticals",
+			"type": "INF",
+			"speed": 15,
+			"armour": 4,
+			"cc": 4,
+			"ff": 4,
+			"weapons": [
+				"Missile Launcher"
+			]
+		},
+		{
+			"name": "Terminators",
+			"type": "INF",
+			"speed": 15,
+			"armour": 4,
+			"cc": 3,
+			"ff": 3,
+			"weapons": [
+				"2|Assault Cannon",
+				"Power Weapons"
+			],
+			"specialRules": [
+				"Reinforced Armour",
+				"Teleport",
+				"Thick Rear Armour"
+			]
+		},
+		{
+			"name": "Thunderhawk",
+			"type": "AC/WE",
+			"speed": "Bomber",
+			"armour": 4,
+			"cc": 6,
+			"ff": 4,
+			"weapons": [
+				"AC Battle Cannon FxF",
+				"2|AC Twin Heavy Bolter FxF",
+				"AC Twin Heavy Bolter Left",
+				"AC Twin Heavy Bolter Right"
+			],
+			"specialRules": [
+				"DC2",
+				"Planetfall",
+				"Reinforced Armour"
+			]
+		},
+		{
+			"name": "Vindicator",
+			"type": "AV",
+			"speed": 25,
+			"armour": 5,
+			"cc": 6,
+			"ff": 4,
+			"weapons": [
+				"Demolisher"
+			],
+			"specialRules": [
+				"Walker"
+			]
+		},
+		{
+			"name": "Whirlwind",
+			"type": "AV",
+			"speed": 30,
+			"armour": 5,
+			"cc": 6,
+			"ff": 5,
+			"weapons": [
+				"Whirlwind"
+			]
+		}
+	]		
+}

@@ -1,0 +1,48 @@
+
+.list {
+	font-size:small;
+	font-family:sans-serif;
+	text-align:left;
+	background-color:#eee;
+	border-top:solid 0.1em #000000;
+	vertical-align:center;
+	padding:0.33em;
+	cursor: pointer;
+}
+img.icon {
+	margin-left:0;
+	margin-right:0.5em;
+	height:1.2em;
+	vertical-align:middle;
+	border:none;
+}
+.list a {
+	text-decoration:none;
+	width: 100%;
+	color:black;
+}
+.p1 {
+	text-align:center;
+	float:left;
+	width:80px;
+}
+.p2 {
+	display:inline-block;
+	width:130px;
+	padding-left: 10px;
+}
+.p3 {
+	display:inline-block;
+	width:150px;
+	padding-left: 10px;
+}
+
+
+.list:hover{
+/*	background-color:teal; */
+	background-image: linear-gradient(to right, #eee, teal);	
+}
+.list:hover a{
+	color:white;
+	font-weight: bold;
+}

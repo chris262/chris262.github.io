@@ -1,0 +1,66 @@
+{
+	"name": "Imperial Allies",
+	"specialRules": [
+	],
+	"units": [
+		{
+			"name": "Reaver Titan",
+			"type": "WE",
+			"speed": 20,
+			"armour": 4,
+			"cc": 3,
+			"ff": 3,
+			"weapons": [
+				"2|Turbo-Laster Destructor",
+				"Rocket Launcher"
+			],
+			"specialRules": [
+				"DC6",
+				"Fearless",
+				"Reinforced Armour",
+				"4 Void Shields",
+				"Walker"
+			]
+		},
+		{
+			"name": "Warhound Titan",
+			"type": "WE",
+			"speed": 30,
+			"armour": 5,
+			"cc": 4,
+			"ff": 4,
+			"weapons": [
+				"Plasma Blastgun",
+				"Vulcan Mega-Bolter"
+			],
+			"specialRules": [
+				"DC3",
+				"Fearless",
+				"Reinforced Armour",
+				"2 Void Shields",
+				"Walker"
+			]
+		},
+		{
+			"name": "Warlord Titan",
+			"type": "WE",
+			"speed": 15,
+			"armour": 4,
+			"cc": 2,
+			"ff": 3,
+			"weapons": [
+				"Volcano Cannon",
+				"Gatling Blaster",
+				"2|Turbo-Laster Destructor"
+			],
+			"specialRules": [
+				"DC8",
+				"Fearless",
+				"Reinforced Armour",
+				"Thick Rear Armour",
+				"6 Void Shields",
+				"Walker"
+			]
+		}		
+	]
+}

@@ -1,0 +1,43 @@
+{
+	"name": "Imperial Navy",
+	"specialRules": [
+	],
+	"units": [
+		{
+			"name": "Heavy Marauder",
+			"type": "AC/WE",
+			"speed": "Bomber",
+			"armour": 5,
+			"weapons": [
+				"AC Twin Lascannon FxF",
+				"AC Bomb Racks FxF",
+				"2|AC Twin Heavy Bolter FxF"
+			],
+			"specialRules": [
+				"DC2"
+			]
+		},
+		{
+			"name": "Thunderbolt",
+			"type": "AC",
+			"speed": "Fighter-Bomber",
+			"armour": 6,
+			"weapons": [
+				"AC Multilaser FxF",
+				"AC Underwing Rockets FxF",
+				"AC Storm Bolters FxF"
+			]
+		},
+		{
+			"name": "Marauder",
+			"type": "AC",
+			"speed": "Bomber",
+			"armour": 4,
+			"weapons": [
+				"AC Twin Lascannon FxF",
+				"AC Bomb Racks FxF",
+				"2|AC Twin Heavy Bolter FxF"
+			]
+		}
+	]
+}
